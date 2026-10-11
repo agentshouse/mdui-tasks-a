@@ -21,3 +21,7 @@ This branch prepares the original satnaing UI from source `58e6567c7c9844b05aaef
 Both explicit task query projections use `/id`, `/title`, `/status`, `/label`, `/priority`. Metadata `path`, `all` and business draft field keys keep their forms. Current official SDK tests retain original response keys, validate every production query expression, and reject old shorthand. All existing non-Tasks modules, schema and 672 Room documents remain unchanged. The original UI does not query Notes because it does not display that section.
 
 The test-only current SDK closure is reproducible with `npm ci --prefix tests/current-runtime --ignore-scripts` followed by `npm run test:current-runtime`; `MD_QUERY_CONTRACT_ROOT` can select an already installed isolated closure. It does not upgrade production dependencies. Publication/renaming remain held until the parent authorizes the coordinated split and the dev first-page gate is resolved.
+
+## Hosted QA and long task IDs — 2026-10-11
+
+Release10's actual hosted create/edit/reload and native draft recovery passed on an isolated labeled QA task. A newly generated 13-character ID overflowed the donor's fixed80px cell (rendered scrollWidth109px). The bounded follow-up changes only that ID cell to the same80px minimum plus intrinsic nonwrapping width. SSR regressions render original and generated IDs; the next exact hosted release must also demonstrate clientWidth >= scrollWidth and no overlap. This does not change identifiers, documents, queries, the schema, other modules or tasks-b.

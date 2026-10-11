@@ -36,7 +36,9 @@ export const tasksColumns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Task' />
     ),
-    cell: ({ row }) => <div className='w-20'>{row.getValue('id')}</div>,
+    cell: ({ row }) => (
+      <div className='min-w-20 whitespace-nowrap'>{row.getValue('id')}</div>
+    ),
     enableSorting: false,
     enableHiding: false,
   },
