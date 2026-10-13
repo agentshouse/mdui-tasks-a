@@ -1,0 +1,8 @@
+{
+  "sourceCommit": "c8a90f465a370ae648b55036f8f7c2b177ae6e6f",
+  "sha256": {
+    "chats/first.md": "bab08e90d4acc33cedc748c517e459f7693b7ca6f804ba44e436eef8e41951f5",
+    "messages/first.md": "04d4a48da153050132dfadbfb4c8db3681bad62370836cb1f60ba459fbe06ac1",
+    "tasks/first.md": "cbd0b0e61da01a1e0c68b6b4033c193d106edcd7f39548d8151bb30e0fe5e6ea"
+  }
+}
